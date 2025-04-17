@@ -1,0 +1,17 @@
+:root {
+  --text-color: rgb(121, 246, 122);
+  --bg-color: black;
+  --bg-blend: darken;
+  --stroke-color: rgba(121, 246, 122, 0.5);
+  --link-bg-color: rgba(121, 246, 122, 0.1);
+  --link-bg-color-hover: rgba(121, 246, 122, 0.05);
+}
+
+.light {
+  --text-color: black;
+  --bg-color: rgba(121, 246, 122, 0.6);
+  --bg-blend: lighten;
+  --stroke-color: rgba(0, 0, 0, 0.5);
+  --link-bg-color: rgba(0, 0, 0, 0.1);
+  --link-bg-color-hover: rgba(0, 0, 0, 0.05);
+}

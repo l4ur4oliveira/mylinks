@@ -1,0 +1,92 @@
+@import url(./root.css);
+
+*,
+*+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  min-height: 100vh;
+  background-color: var(--bg-color);
+  background-blend-mode: var(--bg-blend);
+  backdrop-filter: blur(5px);
+  -webkit-backdrop-filter: blur(5px);
+}
+
+body * {
+  font-family: 'Oxygen Mono', monospace;
+  color: var(--text-color);
+}
+
+.container {
+  margin: auto;
+  padding-top: 3.5rem;
+}
+
+.profile {
+  padding: 1.5rem;
+  text-align: center;
+}
+
+.profile img {
+  width: 112px;
+  border-radius: 50%;
+  border: 2px solid var(--stroke-color);
+}
+
+.profile p {
+  margin: .5rem auto 0;
+  font-weight: 600;
+}
+
+.profile p span {
+  font-size: .8rem;
+  font-weight: 400;
+  filter: brightness(0.5);
+}
+
+.links {
+  padding: 1.5rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem
+}
+
+.link-item {
+  list-style: none;
+  width: 100%;
+}
+
+.link-item a {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+  padding: 1rem 1.5rem;
+  text-decoration: none;
+  border-radius: 0.5rem;
+  border: 1px solid var(--stroke-color);
+  background-color: var(--link-bg-color);
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+  transition: background 0.2s ease;
+}
+
+.link-item a:hover {
+  background-color: var(--link-bg-color-hover);
+  border-color: var(--text-color);
+}
+
+.link-item a i {
+  font-size: 1.4rem;
+}
+
+@media (min-width: 360px) {
+  .container {
+    width: 360px;
+  }
+}
