@@ -7,11 +7,27 @@
   --link-bg-color-hover: rgba(121, 246, 122, 0.05);
 }
 
+.ph-moon-stars {
+  display: initial;
+}
+
+.ph-sun {
+  display: none
+}
+
 .light {
   --text-color: black;
-  --bg-color: rgba(121, 246, 122, 0.6);
+  --bg-color: rgb(121, 246, 122);
   --bg-blend: lighten;
   --stroke-color: rgba(0, 0, 0, 0.5);
   --link-bg-color: rgba(0, 0, 0, 0.1);
   --link-bg-color-hover: rgba(0, 0, 0, 0.05);
+}
+
+.light .ph-moon-stars {
+  display: none;
+}
+
+.light .ph-sun {
+  display: initial;
 }

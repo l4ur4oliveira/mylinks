@@ -47,6 +47,46 @@ body * {
   filter: brightness(0.5);
 }
 
+.switch {
+  width: 4rem;
+  margin: 0 auto;
+  position: relative;
+}
+
+.switch button {
+  width: 2rem;
+  height: 2rem;
+  border: 1px solid var(--stroke-color);
+  border-radius: 50%;
+  background-color: var(--bg-color);
+  position: absolute;
+  top: 50%;
+  left: 0;
+  transform: translateY(-50%);
+  cursor: pointer;
+}
+
+.light .switch button {
+  left: initial;
+  right: 0;
+}
+
+.switch button i {
+  font-size: 1rem;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.switch .track {
+  width: 4rem;
+  height: 1.2rem;
+  border: 1px solid var(--stroke-color);
+  background-color: var(--link-bg-color);
+  border-radius: 9999px;
+}
+
 .links {
   padding: 1.5rem;
   display: flex;
