@@ -51,6 +51,7 @@ body * {
   width: 4rem;
   margin: 0 auto;
   position: relative;
+  cursor: pointer;
 }
 
 .switch button {
@@ -64,11 +65,15 @@ body * {
   left: 0;
   transform: translateY(-50%);
   cursor: pointer;
+  animation: slide-back 0.2s;
+}
+
+.switch button:hover {
+  outline: 0.5rem solid var(--link-bg-color);
 }
 
 .light .switch button {
-  left: initial;
-  right: 0;
+  animation: slide 0.2s forwards;
 }
 
 .switch button i {
@@ -101,18 +106,33 @@ body * {
   width: 100%;
 }
 
-.link-item a {
+.link-item a,
+.link-item .disabled {
   display: flex;
   justify-content: center;
   align-items: center;
   gap: 1rem;
   padding: 1rem 1.5rem;
-  text-decoration: none;
   border-radius: 0.5rem;
   border: 1px solid var(--stroke-color);
   background-color: var(--link-bg-color);
   backdrop-filter: blur(8px);
   -webkit-backdrop-filter: blur(8px);
+}
+
+.link-item .disabled {
+  opacity: 0.5;
+}
+
+.link-item .disabled span {
+  padding: 0.2rem 0.5rem;
+  font-size: 0.8rem;
+  border: 1px solid var(--stroke-color);
+  border-radius: 9999px;
+}
+
+.link-item a {
+  text-decoration: none;
   transition: background 0.2s ease;
 }
 
@@ -121,12 +141,59 @@ body * {
   border-color: var(--text-color);
 }
 
-.link-item a i {
+.link-item a i,
+.link-item .disabled i {
   font-size: 1.4rem;
+}
+
+.credits {
+  padding-top: 3rem;
+  opacity: 0.4;
+}
+
+.credits p {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 0.8rem;
+  color: white;
+}
+
+.credits p img {
+  width: .8rem;
+  margin-right: .5rem;
+}
+
+.light .credits p {
+  color: black;
+}
+
+.light .credits p img {
+  filter: invert(1)
 }
 
 @media (min-width: 360px) {
   .container {
     width: 360px;
+  }
+}
+
+@keyframes slide {
+  0% {
+    left: 0;
+  }
+
+  100% {
+    left: 50%;
+  }
+}
+
+@keyframes slide-back {
+  0% {
+    left: 50%;
+  }
+
+  100% {
+    left: 0;
   }
 }

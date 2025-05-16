@@ -29,7 +29,7 @@
           <span>Tech, people, and products</span>
         </p>
       </div>
-      <div class="switch">
+      <div class="switch" onclick="toggleTheme()">
         <button>
           <i class="ph-fill ph-moon-stars"></i>
           <i class="ph-fill ph-sun"></i>
@@ -37,11 +37,6 @@
         <div class="track"></div>
       </div>
       <ul class="links">
-        <li class="link-item">
-          <a href="#" target="_blank">
-            <i class="ph-fill ph-globe-hemisphere-west"></i>Website
-          </a>
-        </li>
         <li class="link-item">
           <a href="https://www.linkedin.com/in/l4ur4oliveira/" target="_blank">
             <i class="ph-fill ph-linkedin-logo"></i>LinkedIn
@@ -57,7 +52,28 @@
             <i class="ph-fill ph-dev-to-logo"></i>Dev.to
           </a>
         </li>
+        <li class="link-item">
+          <span class="disabled">
+            <i class="ph-fill ph-globe-hemisphere-west"></i>
+            Website <span>soon</span>
+          </span>
+        </li>
       </ul>
+      <div class="credits">
+        <p>
+          <img src="./images/olive-leaf.svg" alt="Ícone de folha de oliveira" />
+          2025
+        </p>
+      </div>
     </div>
+    <script>
+      if (window.matchMedia("(prefers-color-scheme: light)").matches) {
+        document.documentElement.classList.add("light");
+      }
+
+      function toggleTheme() {
+        document.documentElement.classList.toggle("light");
+      }
+    </script>
   </body>
 </html>
