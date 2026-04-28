@@ -156,12 +156,15 @@ body * {
   justify-content: center;
   align-items: center;
   font-size: 0.8rem;
-  color: white;
 }
 
 .credits p img {
   width: .8rem;
   margin-right: .5rem;
+}
+
+#footer-year:not(.light span) {
+  color: white;
 }
 
 .light .credits p {

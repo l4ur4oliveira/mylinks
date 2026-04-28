@@ -52,11 +52,15 @@
       </ul>
       <div class="credits">
         <p>
-          <img src="./images/olive-leaf.svg" alt="Ícone de folha de oliveira" /> 2025
+          <img src="./images/olive-leaf.svg" alt="Ícone de folha de oliveira" /> <span id="footer-year"></span>
         </p>
       </div>
     </div>
     <script>
+      // Dynamic footer year
+      document.getElementById("footer-year").textContent = new Date().getFullYear();
+
+      // Handle theme
       if (window.matchMedia("(prefers-color-scheme: light)").matches) {
         document.documentElement.classList.add("light");
       }
